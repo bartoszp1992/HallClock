@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "sevenseg.h"
+#include "rtc.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,6 +46,13 @@
 RTC_HandleTypeDef hrtc;
 
 /* USER CODE BEGIN PV */
+int alarm[4][2];
+
+int modeSelected = 0;
+int modeActual = 0;
+//^modes - 0 display, 1 set alarm, 2 set clock,
+
+int actuallySetting;
 
 /* USER CODE END PV */
 
@@ -99,6 +107,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+
+	  display_twice(0, hours);
+	  display_twice(2, minutes);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
