@@ -109,8 +109,14 @@ int main(void)
   {
 
 
-	  display_twice(0, hours);
-	  display_twice(2, minutes);
+	 display(1, 8);
+	 display(2, 8);
+	 display(3, 8);
+	 display(4, 8);
+	  HAL_GPIO_WritePin(BELL_GPIO_Port, BELL_Pin, 1);
+	  HAL_Delay(1000);
+	  HAL_GPIO_WritePin(BELL_GPIO_Port, BELL_Pin, 0);
+	  HAL_Delay(1000);
 
     /* USER CODE END WHILE */
 
